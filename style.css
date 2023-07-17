@@ -4,6 +4,10 @@ body{
     font-family: 'Noto Sans', sans-serif;
 }
 
+body * {
+    box-sizing: border-box;
+}
+
 .main-login{
     width: 100vw;
     height: 100vh;
@@ -22,7 +26,12 @@ body{
     flex-direction: column;
 }
 .left-login > h1{
+    font-size: 2vw;
     color: #77ffc0;
+}
+
+.left-login-image{
+    width: 20vw;
 }
 
 .right-login{
@@ -96,4 +105,37 @@ body{
     background: #00ff88;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login > h1{
+        display: none;
+    }
+
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-image{
+        width: 50vw;
+    }
+
+    .card-login{
+        width: 90%;
+    }
 }
